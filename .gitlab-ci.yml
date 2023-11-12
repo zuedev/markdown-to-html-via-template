@@ -14,9 +14,13 @@ test:
 
 publish_to_npm:
   stage: publish
+  only:
+    - tags
   script:
     # create .npmrc file for npmjs.org registry with npm access token
     - echo "//registry.npmjs.org/:_authToken=${NPM_ACCESS_TOKEN}" > .npmrc
+    # write package version to package.json file
+    - npm version --no-git-tag-version ${CI_COMMIT_TAG}
     # get version from package.json file
     - export LOCAL_PACKAGE_VERSION=$(node -p -e "require('./package.json').version")
     # get version from npmjs.org registry
@@ -29,5 +33,3 @@ publish_to_npm:
       fi
     # publish to npmjs.org registry
     - npm publish --access public
-  only:
-    - main

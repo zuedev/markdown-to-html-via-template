@@ -1,6 +1,5 @@
 {
   "name": "marked-template",
-  "version": "0.0.1",
   "description": "A simple markdown template engine.",
   "main": "src/index.js",
   "type": "module",
