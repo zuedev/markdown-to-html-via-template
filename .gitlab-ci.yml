@@ -30,7 +30,19 @@ test:
 publish_to_npm:
   stage: publish
   script:
+    # create .npmrc file for npmjs.org registry with npm access token
     - echo "//registry.npmjs.org/:_authToken=${NPM_ACCESS_TOKEN}" > .npmrc
+    # get version from package.json file
+    - export LOCAL_PACKAGE_VERSION=$(node -p -e "require('./package.json').version")
+    # get version from npmjs.org registry
+    - export REMOTE_PACKAGE_VERSION=$(npm view ${CI_PROJECT_NAME} version)
+    # check if version is already published on npmjs.org registry
+    - |
+      if [[ "${LOCAL_PACKAGE_VERSION}" == "${REMOTE_PACKAGE_VERSION}" ]]; then
+        echo "Version ${LOCAL_PACKAGE_VERSION} already published on npmjs.org registry. Skipping publish."
+        exit 0
+      fi
+    # publish to npmjs.org registry
     - npm publish --access public
   only:
     - main
