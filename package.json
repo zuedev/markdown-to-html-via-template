@@ -1,5 +1,5 @@
 {
-  "name": "marked-template",
+  "name": "markdown-to-html-via-template",
   "description": "A simple markdown template engine.",
   "main": "src/index.js",
   "type": "module",
