@@ -9,5 +9,29 @@
   },
   "scripts": {
     "test": "node src/index.js -i src/README.md -o dist/index.html -t src/template.html"
+  },
+  "author": "Alex Pooley <zuedev@gmail.com> (https://zue.dev)",
+  "license": "UNLICENSED",
+  "keywords": [
+    "markdown",
+    "template",
+    "engine",
+    "html",
+    "file",
+    "convert",
+    "cli",
+    "md",
+    "marked",
+    "md2html"
+  ],
+  "homepage": "https://github.com/zuedev/markdown-to-html-via-template",
+  "bugs": {
+    "url": "https://github.com/zuedev/markdown-to-html-via-template/issues",
+    "email": "zuedev+markdown-to-html-via-template@gmail.com"
+  },
+  "bin": "./src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zuedev/markdown-to-html-via-template.git"
   }
 }
