@@ -1,6 +1,9 @@
 <div>
     <img src="assets/logo_square.png" align="left" width="100px" />
-    <h1>markdown-to-html-via-template</h1>
+    <h1>
+        markdown-to-html-via-template
+        <a href="https://gitlab.com/zuedev/markdown-to-html-via-template/-/commits/main"><img alt="pipeline status" src="https://gitlab.com/zuedev/markdown-to-html-via-template/badges/main/pipeline.svg" /></a>
+    </h1>
     <blockquote>A simple CLI tool to convert Markdown to HTML using a template.</blockquote>
 </div>
 
