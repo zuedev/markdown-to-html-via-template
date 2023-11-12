@@ -33,5 +33,9 @@ Options:
 
 Examples:
     - Build a HTML file from a markdown file using a template
-    $ markdown-to-html-via-template --input-file docs/README.md --output-file dist/index.html --template-file src/template.html --insert-title
+    $ markdown-to-html-via-template \
+        --input-file docs/README.md \
+        --output-file dist/index.html \
+        --template-file src/template.html \
+        --insert-title
 ```
