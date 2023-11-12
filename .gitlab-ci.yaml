@@ -1,0 +1,22 @@
+image: node:20
+
+before_script:
+  - npm install
+
+stages:
+  - test
+  - publish
+
+test:
+  stage: test
+  script:
+    - npm run test
+
+publish_to_gitlab_package_registry:
+  stage: publish
+  script:
+    - echo "@scope:registry=https://${CI_SERVER_HOST}/api/v4/projects/${CI_PROJECT_ID}/packages/npm/" > .npmrc
+    - echo "//${CI_SERVER_HOST}/api/v4/projects/${CI_PROJECT_ID}/packages/npm/:_authToken=${CI_JOB_TOKEN}" >> .npmrc
+    - npm publish
+  only:
+    - main
