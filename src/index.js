@@ -10,6 +10,10 @@ const flags = args
   .option("template-file", "The template file", "template.html")
   .option("insert-title", "Insert the title from the markdown file", true)
   .command("build", "Build the HTML file from the template and markdown files")
+  .example(
+    "markdown-to-html-via-template --input-file docs/README.md --output-file dist/index.html --template-file src/template.html --insert-title",
+    "Build a HTML file from a markdown file using a template"
+  )
   .parse(process.argv);
 
 // Read the template file

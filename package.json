@@ -1,6 +1,6 @@
 {
   "name": "markdown-to-html-via-template",
-  "description": "A simple markdown template engine.",
+  "description": "A simple CLI tool to convert Markdown to HTML using a template.",
   "main": "src/index.js",
   "type": "module",
   "dependencies": {
