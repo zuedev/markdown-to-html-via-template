@@ -1,6 +1,8 @@
-# markdown-to-html-via-template
-
-> A simple CLI tool to convert Markdown to HTML using a template.
+<div>
+    <img src="assets/logo_square.png" align="left" width="100px" />
+    <h1>markdown-to-html-via-template</h1>
+    <blockquote>A simple CLI tool to convert Markdown to HTML using a template.</blockquote>
+</div>
 
 ## Installation
 
